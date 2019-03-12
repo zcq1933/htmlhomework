@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		.redp {
+			color: red;
+		}
+		fieldset span {
+			color: red;
+		}
+		
+		.submitButton {
+			margin-top: 10px;
+		} 
+
+		fieldset {
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>毕业生信息</h1>
+	<form action="">
+		<fieldset>
+			<legend class = "redp">学生信息</legend>
+			姓 名 <input class = "inputLine" type="text" placeholder="请输入姓名"><span>*</span><br>
+			学 号 <input class = "inputLine" type="number" placeholder="请输入学号" ><span>*</span><br>
+			手 机 <input class = "inputLine" type="tel" placeholder="请输入手机号"><span>*</span><br>
+			邮 箱 <input class = "inputLine" type="email" placeholder="请输入邮箱地址"><span>*</span><br>
+		</fieldset>	
+		<fieldset>
+			<legend class = "redp">录取情况</legend>
+			录取学校 <input type="text"><br>
+			入学成绩 <input type="text"><br>
+			入学时间 <input type="date"><br>
+		</fieldset>
+		<input class = "submitButton" type="submit" value = "提交">
+	</form>
+</body>
+</html>
