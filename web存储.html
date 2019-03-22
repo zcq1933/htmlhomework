@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		p {
+			margin-top: 0px;
+		}
+		#memo {
+			width: 200px;
+			height: 40px;
+		}
+		#search1 {
+			width: 100px;
+			height: 40px;
+		}
+		.history1 span{
+			display: inline-block;
+			background: #e0e0e0;
+			color: black;
+			font-size: 20px;
+			margin-left: 15px;
+		}
+		.history1 span:first-child {
+			margin-left: 0px;
+		}
+	</style>
+</head>
+<body>
+	<input id = "memo" type="text" placeholder="请输入您想查找的商品">
+	<button class = "search1" id = "search1" onclick = "saveStorage()">搜索</button>
+	<p>最近搜索</p>
+	<div class = "history1" id = "history1"></div>
+</body>
+<script>
+	var times = 0;
+	window.onload = loadStorage("history1");
+	if(!window.localStorage) {
+		alert("您的浏览器不支持localstorage");
+	}
+
+
+	function saveStorage(id) {
+		var memoDetail = document.getElementById("memo").value;
+		times++;
+		var keyin = new Date();
+		localStorage.setItem(keyin,memoDetail);
+		console.log("保存了一个了");
+		loadStorage("history1");
+	}
+
+
+	function loadStorage(id) {
+		var history1 = document.getElementById(id);
+		console.log(times);
+		console.log(localStorage.length);
+		if(times == 0) {
+			for(var j = 0;j<localStorage.length;j++) {
+				var key = localStorage.key(j);
+				var historyStr = localStorage.getItem(key);
+				var np = document.createElement("span");
+				np.class = "hisBlock";
+				np.innerHTML = historyStr;
+				var nnode = history1.appendChild(np);
+			}
+		}
+		else {
+
+			var key = localStorage.key(localStorage.length-1);
+			var historyStr = localStorage.getItem(key);
+			var np = document.createElement("span");
+			np.class = "hisBlock";
+			np.innerHTML = historyStr;
+			var nnode = history1.appendChild(np);
+		}
+	}
+</script>
+</html>
