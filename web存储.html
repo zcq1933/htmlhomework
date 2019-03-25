@@ -75,5 +75,21 @@
 			var nnode = history1.appendChild(np);
 		}
 	}
+
+
+
+	window.onload = function(){
+		if(localStorage.length != 0) {
+			var x = document.createElement("button");
+			x.innerHTML = "x";
+			x.style.marginLeft = 15 + "px";
+			x.onclick = function() {
+				localStorage.clear();
+			}
+			document.getElementById("history1").appendChild(x);
+
+		}
+		console.log("1234");
+	}
 </script>
 </html>
