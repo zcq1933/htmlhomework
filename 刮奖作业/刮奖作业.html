@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>刮奖</title>
+    <style>
+       #canvas {
+           width:244px;
+           height:82px;
+           background:url('imgs/bgp.png');
+           background-size:100% 100%;
+           margin:0 auto;
+           margin-top:50px;
+       }
+        
+    </style>
+</head>
+<body>
+    <canvas id = "canvas" width = "244" height = "82">
+
+    </canvas>
+</body>
+<script>
+var canvas = document.getElementById("canvas");
+var context = canvas.getContext("2d");
+context.fillStyle = "d1d1d1";
+context.fillRect(0,0,244,82);
+context.globalCompositeOperation = 'destination-out';
+//显示结果函数
+function showResult() {
+    context.fillRect(0,0,244,82);
+}
+// 刮奖圆形设置
+function drawArcByPoint(x,y) {
+    context.beginPath();
+    context.arc(x - canvas.offsetLeft,y - canvas.offsetTop,20,0,Math.PI*2);
+    context.closePath();
+    context.fillStyle = "#dddddd";
+    context.fill();
+    checkComplete();
+}
+
+// 检查是不是完成刮奖
+function checkComplete() {
+    var imgData = context.getImageData(0,0,244,82);
+    var pxData = imgData.data;//获取字节数据
+    var len = pxData.length;
+    var count = 0; // 记录透明点的个数
+    for(var i = 0;i < len;i+=4) {
+        var alpha = pxData[i+3];
+        if(alpha < 10) {
+            count++;
+        }
+    }
+    var percent = count/(len/4); //计算百分比
+    if(percent >= 0.8) {
+        showResult();
+    }
+}
+1
+// 根据鼠标的move画圆
+function drawArcMouseHandle(event) {
+    event.preventDefault();
+    event.target.addEventListener('mousemove',mousemoveHandle);
+
+}
+//为了能够移除mousemove
+function mousemoveHandle(event) {
+    event.preventDefault();
+    drawArcByPoint(event.pageX,event.pageY);
+}
+canvas.addEventListener('mousedown',drawArcMouseHandle);
+canvas.addEventListener('mouseup',function(event) {
+    this.removeEventListener('mousemove',mousemoveHandle);
+});
+
+
+</script>
+</html>
