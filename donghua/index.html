@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .main {
+            width:400px;
+            height:300px;
+            overflow: hidden;
+            margin:0 auto;
+            margin-top:20px;
+            background:url(images/bg1.jpg) no-repeat;
+            background-size:100% 90%;
+            border:1px solid #adadad;
+            position:relative;
+        }
+        p {
+            style:none;
+        }
+        
+        .content {
+            width:400px;
+            height:100px;
+            background-color: rgb(255, 255, 255);
+            position: absolute;;
+            top:200px;
+            right:0px;
+            display:inline-block;
+            /* text-align:center; */
+            transition:all .5s ease;
+        }
+
+        .content h3 {
+            /* padding-top: 10px; */
+            padding-left: 10px;
+            
+        }
+
+        .contentTop {
+            width:60px;
+            height:30px;
+            background-color: rgb(0, 139, 219);
+            display:inline-block;
+            position: absolute;;
+            text-align:center;
+            top:170px;
+
+        }
+        .contentTop span {
+            color:white;
+            text-align: center;
+            line-height:30px;
+
+        }
+
+        footer {
+            position: absolute;
+            /* top:50px; */
+            left:40px;
+            /* bottom:10px; */
+            bottom:5px;
+        }
+
+        footer span {
+            font-size:10px;
+            color:#b4b4b4;
+            
+        }
+
+        .content h4 {
+            display:inline-block;
+            color:rgb(0, 139, 219);
+            padding-left:30px;
+            margin-top:0px;
+            margin:0;
+            font-size:16px;
+            margin-top:5px;
+            
+        }
+        h3 {
+            margin:0px;
+            margin-top:5px;
+        }
+
+        .date {
+            position: absolute;
+            width:40px;
+            height:40px;
+            background-color: rgb(0, 139, 219);
+            top:20px;
+            right:20px;
+            display:inline-block;
+            border-radius:50%;
+            text-align:center;
+        }
+        .date p {
+            font-size:13px;
+            margin:0px;
+            color:#ffff;
+            line-height:20px;
+        }
+
+        /* .content:hover {
+            height:200px;
+            top:100px;
+            transition:all .5s ease;
+            
+        } */
+        /* .contentTop:hover {
+            top:70px;
+            transition:all .5s ease;
+        } */
+       
+       
+
+       .detail {
+           /* width:400px; */
+           font-size:13px;
+           color:#b0b0b0;
+           display:none;
+           /* text-align:center; */
+           padding-left:30px;
+           margin-top:15px;
+       }
+       /* .content:hover .detail {
+            display:block;
+            width:300px;
+            transition:all .5s ease;
+            
+       } */
+
+       
+       .main:hover .bg1{
+           background-size:110% 100%;
+           filter:brightness(0.9);
+           transition:all .5s;
+       }
+
+       .bg1 {
+            display:inline-block;
+            width:400px;
+            height:300px;
+            background: url(images/bg1.jpg);
+            position:absolute;
+            top:0;
+            left:0;
+            background-size:100% 90%;
+            transition:all .5s ease;
+       }
+       /* 设置图片标签的上浮 */
+       .main:hover .contentTop {
+           top:70px;
+           transition:all .5s ease;
+       }
+       
+       .main:hover .content {
+            top:100px;
+            height:200px;
+            transition:all .5s ease;
+       }
+       .main:hover .content .detail {
+            display:block;
+            width:300px;
+            transition:all .5s ease;
+       }
+       
+    </style>
+</head>
+<body>
+    <div class = "main">
+        <div class = "bg1">
+
+        </div>
+        <div class = "date">
+            <p>18</p>
+            <p>5月</p>
+        </div>
+        <div class = "contentTop" id = "contentTop">
+            <span>照片</span>
+        </div>
+        <div class = "content" id = "content">
+            <h3>上海丽思卡尔顿酒店</h3>
+            <!-- <h4>五星级酒店</h4> -->
+            <h4>坐落于上海的五星级酒店</h4>
+            <span class = "detail">上海浦东丽思卡尔顿酒店是浦东区首间集豪华办公、住宿及购物设施于一体的酒店，为您提供无与伦比的会议及商务旅游体验。该酒店坐落于陆家嘴金融贸易区的中心，位于一栋设计新颖的58层大楼之上，可俯瞰外滩全景。</span>
+            <footer>
+                <span>10分钟前 123评论</span>
+            </footer>
+        </div>
+    </div>
+</body>
+<script>
+    var content  = document.getElementById("content");
+    var contentTop = document.getElementById("contentTop");
+    
+</script>
+</html>
