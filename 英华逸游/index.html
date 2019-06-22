@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .top {
+            display: block;
+            width:100%;
+            height:40px;
+            background-color:black;
+            vertical-align:middle;
+            line-height:40px;
+        }
+
+        .top >* {
+            float:right;
+            display:inline-block;
+            vertical-align: middle; 
+            /* margin:auto; */
+        }
+        .top img {
+            height:20px;
+            display:inline-block;
+            vertical-align:middle;
+            /* text-align:center; */
+        }
+
+        .top span {
+            color:white;
+            line-height:40px;
+        }
+
+        .btn {
+            color:white;
+        }
+
+        .top:first-child {
+            padding-right:10%;
+        }
+
+        .navbar {
+            height:100px;
+        }
+        .main-nav{
+            height:50px;
+            display:inline-block;
+            vertical-align: middle;
+        }
+        .main-nav a{
+            font-size:20px;
+        }
+
+        
+        .nav1 li a{ 
+            font-size :25px;
+            line-height:100px;
+            background-color:white;
+        }
+        .nav1 li {
+            line-height:100px;
+        }
+        #nav1 {
+            height:100px;
+            background-color: #fff;
+            display:inline-block;
+            vertical-align: middle;
+            /* line-height:100px; */
+        }
+        .navbar-main {
+            height:100px;
+            width:80%;
+            margin:0 auto;
+            position:relative;
+            line-height:100px;
+            display:inline-block;
+           
+        }
+
+    </style>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class = "top">
+        <span>400-808-8682</span>
+        <a class = "btn" href="">注册</a>
+        <span>|</span>
+        <a class = "btn" href="">请登录</a>
+        <img class = "img-responsive center-block" src="img/tell.png" alt="">
+
+    </div>
+    <nav class = "navbar navbar-default" >
+        <div class = "navbar-main" style = "background-color:red">
+            <div class = "navbar-header">
+                <a class = "navbar-brand" href="">
+                    <img src="img/logo.png" alt="rand">
+                </a>
+            </div>
+            <!-- <div class = "main-nav main-nav1"> -->
+            <ul class = "nav navbar-nav nav1" id = "nav1">
+                <li><a href="">首页</a></li>
+                <li><a href="">热门路线</a></li>
+                <li><a href="">签证推荐</a></li>
+                <li><a href="">使命愿景</a></li>
+            </ul>
+            <!-- </div> -->
+        </div>
+    </nav>
+</body>
+</html>

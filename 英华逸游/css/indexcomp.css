@@ -1,0 +1,439 @@
+* {
+    padding:0;
+    margin:0;
+}
+body {
+    background-color: #f5f5f5;
+}
+html,body{
+    margin:0;padding:0;border:0
+    }
+span {
+    margin:0;
+    padding:0;
+}
+/* a {
+    text-decoration: none;
+} */
+.top {
+    display: block;
+    height:50px;
+    background-color:black;
+    line-height:50px;
+    position:relative;
+    position:relative;
+
+}
+.topmain img{
+    display:inline-block;
+    vertical-align: middle;
+}
+.topmain {
+    top:10%;
+    width:30%;
+    height:80%;
+    /* line-height:100%; */
+    display:inline-block;
+    vertical-align: middle;
+    /* background-color: red; */
+    position: absolute;
+    left:70%;
+}
+.topmain a,span {
+    line-height:30px;
+    color:white;
+}
+
+.mnav {
+    /* position:relative; */
+    width:100%;
+    background-color: rgb(241, 241, 241);
+    height:100px;
+
+}
+.mnavmain {
+    width:80%;
+    margin:0 auto;
+    height:100px;
+    line-height:100px;
+}
+.mnavmain img {
+    /* float:left; */
+    display:inline-blcok;
+    vertical-align:middle;
+}
+
+.mnav ul li {
+    display:inline-block;
+}
+nav {
+    display:inline-block;
+}
+
+.mnavmain2 {
+    height:80px;
+    /* width:500px; */
+    line-height:80px;
+    /* float:left; */
+    display:inline-block;
+    vertical-align: middle;
+    margin-left:100px;
+}
+
+.mnavlist li{
+    width:80px;
+    font-size:20px;
+    color:black;
+    /* font-family: "黑体"; */
+    margin-left:20px;
+    text-align:center;
+}
+.mnavlist a {
+    color:black;
+    text-align:center;
+}
+.mnavlist li:hover a{
+    text-decoration:none;
+    color:red;
+}
+.mnavlist li:hover {
+    border-bottom: 2px solid red;
+}
+
+/* 设置轮播图 */
+.carousel-inner  {
+    width:100%;
+    height:380px;
+}
+#genergic {
+    width:100%;
+}
+.item {
+    width:100%;
+}
+
+.detail1 {
+    position: absolute;
+    top:10%;
+    left:10%;
+    color:#fefefe;
+    font-family:"等线";
+
+
+}
+
+.lunbo {
+    position:relative;
+}
+
+.detail2 {
+    font-family:"等线";
+    color:#fff;
+    position:absolute;
+    top:30%;
+    left:10%;
+}
+
+
+#search1 {
+    width:30%;
+    position:absolute;
+    top:70%;
+    left:33%;
+}
+
+.button-search {
+    width:60px;
+    background-color: red;
+}
+
+.container-car {
+    display:block;
+    position:relative;
+    height:350px;
+}
+
+
+.container-car-inner {
+    position:absolute;
+    width:20%;
+    height:100%;
+    background-color: #19376e;
+    right:0;
+}
+.inner1 {
+    width:100%;
+    height:200px;
+    position:absolute;
+    top:20%;
+    left:0;
+    text-align:center;
+    margin:0 auto;
+    
+}
+.inner1 p {
+    display:block;
+    font-size:20px;
+    color:white;
+    margin-top:10px;
+    font-family:"黑体";
+    margin:0 auto;
+    text-align:center;
+    margin-top:10px;
+}
+
+.inner1 button {
+    color:white;
+    display:block;
+    width:60%;
+    height:20%;
+    border:2px solid white;
+    border-radius:10px;
+    background-color:transparent;
+    margin:0 auto;
+}
+
+.pic-collect1 {
+    height:1020px;
+}
+
+.left-collect {
+    height:100%;
+}
+
+.left-pic1 {
+    width:100%;
+    height:50%;
+    background-size:cover;
+    position:relative;
+}
+
+.pic-detail {
+    width: 100%;
+    height:15%;
+    background-color:black;
+    position:absolute;
+    top:85%;
+}
+
+.pic-detail p {
+    padding-top:18px;
+    color:white;
+    /* display:inline-block; */
+}
+.pic-detail span{
+    display:inline-block;
+}
+
+.pic-detail >* {
+    padding-left:50px;
+}
+
+.pic-detail2 >* {
+    padding-left:30px;
+}
+.right-collect {
+    height:100%;
+
+}
+.right-pic {
+    height:33.33%;
+    position:relative;
+}
+.pic-detail2 {
+    width: 100%;
+    height:15%;
+    background-color:black;
+    position:absolute;
+    top:85%;
+    opacity: 0.5;
+}
+.pic-detail2 p {
+    padding-top:4px;
+    color:white;
+    display:inline-block;
+}
+
+.pic-collect2 {
+    height:550px;
+    
+}
+
+.collect2-left {
+    height:100%;
+    position:relative;
+}
+
+.collect2-mid {
+    height:100%;
+    /* background-color:red; */
+}
+.four-pic {
+    /* background-color: black; */
+    height:49%;
+    position: relative;
+}
+
+.pic-detail2 {
+    line-height:100%;
+    width:100%;
+    height:10%;
+    opacity: 50%;
+    top:90%;
+    background-color: black;
+    float:bottom;
+}
+.pic-detail2 >* {
+    line-height:100%;
+}
+
+#test1 span{
+    display:inline-block;
+    padding-top:6%;
+}
+
+.watchmore-container {
+    height:100px;
+}
+
+.watchmore {
+    color:grey;
+    height:50px;
+    width:150px;
+    margin-top:50px;
+    margin-bottom:50px;
+    background-color:transparent;
+    border:2px solid grey;
+    border-radius: 15px;
+}
+
+.all1 {
+    width:100%;
+}
+
+.right-detail {
+    width:60%;
+    height:100%;
+    background-color: #1c5080;
+    text-align:center;
+    position:absolute;
+    right:0;
+    top:0;
+    color:white;
+}
+
+.right-detail >* {
+    padding-top:50px;
+    width:70%;
+    margin:0 auto;
+}
+
+.three-details img{
+    padding-top:50px;
+}
+.three-details {
+    position:relative;
+    /* text-align:center; */
+}
+.three-details img:nth-last-child(1) {
+    position:absolute;
+    top:50px;
+    left:135px;
+}
+.three-details p {
+    font-size:20px;
+    color:white;
+    position:absolute;
+    top:165px;
+    left:125px;
+}
+
+.three-details img:first-child {
+    position: absolute;
+    left:70px;
+}
+.three-details span{
+    position:absolute;
+    top:280px;
+    width:270px;
+    left:10%;
+    text-align:center;
+    
+}
+
+.bottom-1st {
+    height:900px;
+    background-color:black;
+}
+
+.bottom-1st-in {
+    height:700px;
+
+}
+
+.in-line1 {
+    width:100%;
+    display:block;
+    height:100px;
+    /* border:1px solid red; */
+    margin-top:50px;
+    vertical-align: middle;
+
+}
+
+.in-line1 span {
+    font-size:20px;
+    line-height:100px;
+    display:inline-block;
+    float:left;
+}
+
+.in-logo {
+    width:90px;
+    position:relative;
+    height:100px;
+    vertical-align:middle;
+    display:inline-block;
+    margin-left:20px;
+    /* text-align:center; */
+    /* margin:0 auto; */
+    
+}
+.in-line1 img {
+    position:absolute;
+    vertical-align:middle;
+    display:inline-block;
+    top:25%;
+    left:40%;
+    margin:0 auto;
+} 
+
+.in-logo p {
+    position:absolute;
+    top:70px;
+    width:100px;
+    font-size:15px;
+    color:white;
+    left:40px;
+    margin-top:10px;
+
+}
+
+
+.countries {
+    padding-top:35px;
+    font-size:15px;
+    color:white;
+    padding-left:140px;
+    width:100%;
+    line-height:35px;
+}
+.corp {
+    text-align:center;
+
+}
+.corp p {
+    font-size:15px;
+    color:white;
+    padding-top:50px;
+}
