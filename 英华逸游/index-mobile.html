@@ -196,4 +196,17 @@
 </body>
     <script src="js/jQuery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+            if(window.screen) {
+              var m_height=screen.height;
+              var mobile = "index-mobile.html";
+              var comp = "index.html";
+              if(m_height > 750) {
+                self.location.replace(comp);
+                
+              }
+              
+            }
+          </script>
 </html>
